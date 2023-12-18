@@ -1,0 +1,71 @@
+﻿
+Project's User story:
+	1. As a Property Owner/ Administrator, I want to:
+			- CRUD property manager account
+			- CRUD tennant account
+			- have full access of the Website
+	
+	2. As a Property Manager, I want to:
+			- CRUD building
+			- CRUD appartment
+			- keep track of appartment status
+			- schedule tennant's appointment
+			- respond to tennant's message
+	
+	3. As a tenants, I want to:
+			- Create online account
+			- View appartment
+			- make appointment with Property Manager
+			- message to Property Manager
+
+
+Class Diagram:
+	
+	1. Users:
+		- UserId : auto [key]
+		- Username : String [Unique]
+		- Password : String
+		- Title : String
+
+	2. Administrator:
+		- AdminId : auto [Key]
+		- FirstName : string
+		- LastName : string
+		- Email : String
+		- PhoneNumber : String
+		- UserId : [Foreign]
+
+	3. Property Managers:
+		- ManagerId : auto [Key]
+		- FirstName : string
+		- LastName : string
+		- Email : String
+		- PhoneNumber : String
+		- UserId : [Foreign]
+
+	4. Tenants:
+		- TenantsId : auto [Key]
+		- FirstName : string
+		- LastName : string
+		- Email : String
+		- PhoneNumber : String
+		- UserId : [Foreign]
+
+	5. Appointments:
+		- ApointmentId : auto [Key]
+		- TenantsId : int
+		- ManagerId : int
+		- ApointmentDate : Date
+		- StartTime: DateTime
+		- EndTime: DateTime
+		- Status: string
+
+	6. Messages:
+		- MessageId : auto [Key]
+		- SenderId : int 
+		- ReceiverId : int
+		- Content : String
+		- Timestamp : DateTime
+		- isRead : bool
+	
+	 

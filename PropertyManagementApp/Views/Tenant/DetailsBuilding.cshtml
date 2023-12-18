@@ -1,0 +1,90 @@
+﻿@model PropertyManagementApp.Models.CombinedViewModel
+
+@{
+    ViewBag.Title = "DetailsBuilding";
+    Layout = "~/Views/Shared/TenantLayout.cshtml";
+}
+
+<h2>DetailsBuilding</h2>
+
+<div>
+    <h4>Building</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Building.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Building.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Building.BuildingName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Building.BuildingName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Building.TotalFloors)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Building.TotalFloors)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Building.AllowPet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Building.AllowPet)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Property")
+</p>
+<br />
+<br />
+<br />
+<h4>Appartment Available</h4>
+
+<table class="table">
+    <tr>
+
+        <th>
+            Unit Number:
+        </th>
+        <th>
+            Number of Bedroom:
+        </th>
+        <th>
+            Furnished:
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.appartments)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BedRoomNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Furnished)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "DetailsAppartment", new { id = item.AppartmentId }) |
+                @Html.ActionLink("Make Appointment", "CreateAppointment", new { id = item.AppartmentId }) |
+            </td>
+        </tr>
+    }
+
+</table>

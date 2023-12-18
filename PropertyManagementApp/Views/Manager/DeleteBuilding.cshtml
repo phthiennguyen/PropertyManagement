@@ -1,0 +1,94 @@
+﻿@model PropertyManagementApp.Models.CombinedViewModel
+
+@{
+    ViewBag.Title = "DeleteBuilding";
+    Layout = "~/Views/Shared/ManagerLayout.cshtml";
+}
+
+<h2>DeleteBuilding</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Building</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Building.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Building.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Building.BuildingName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Building.BuildingName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Building.TotalFloors)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Building.TotalFloors)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Building.AllowPet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Building.AllowPet)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back", "Property")
+        </div>
+    }
+</div>
+
+<br />
+<br />
+<h4>This building have:</h4>
+
+<table class="table">
+    <tr>
+
+        <th>
+            Unit Number:
+        </th>
+        <th>
+            Number of Bedroom:
+        </th>
+        <th>
+            Furnished:
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.appartments)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BedRoomNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Furnished)
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f60b227c51404cdbb92cc6a114560526" Name="Diagram1">
+        <EntityTypeShape EntityType="PRMDBModel.Admin" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRMDBModel.Appartment" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRMDBModel.Appointment" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRMDBModel.Building" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRMDBModel.Manager" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRMDBModel.Message" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRMDBModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRMDBModel.Tenant" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRMDBModel.User" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <AssociationConnector Association="PRMDBModel.FK__Admins__UserId__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="PRMDBModel.FK_Appartments_Buildings" ManuallyRouted="false" />
+        <AssociationConnector Association="PRMDBModel.FK__Appointme__Manag__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="PRMDBModel.FK__Appointme__Tenan__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="PRMDBModel.FK__Managers__UserId__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="PRMDBModel.FK__Messages__Receiv__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="PRMDBModel.FK__Messages__Sender__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="PRMDBModel.FK__Tenants__UserId__2D27B809" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
